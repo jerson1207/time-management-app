@@ -1,0 +1,22 @@
+<% @user.each do |user| %>
+	<% user.posts.each do |post| %>
+		<tr>
+			<td>
+					<%= user.full_name %>
+			</td>
+
+			<td>
+				<%= post.date %>
+			</td>
+			<td>
+				<%= post.body.truncate(75) %>
+			</td>
+			<td>
+				<%= post.request %>
+			</td>
+			<td>
+				<%= post.status %>
+			</td>
+		</tr> 
+	<% end %>
+<% end %>	

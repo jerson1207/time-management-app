@@ -1,0 +1,31 @@
+<%= form_for @post, class: "form-horizontal" do |f| %>
+
+<% if @post.errors.any? %>
+  <% @post.errors.full_messages.each do |e| %>
+    <%= e %>
+  <% end %>
+<% end %>
+
+
+  <div class="form-row">
+    <div class="form-group col-md-4">
+      <%= f.label :request, "Request Overtime", class: "control-label" %>  
+      <%= f.number_field :request, class: "form-control" %>  
+
+      <%= f.label :date, class: "control-label" %>
+      <%= f.date_field :date, class: "form-control" %>
+
+    </div>    
+
+    <div class="form-group col-md-8">
+      <%= f.label :body, class: "control-label" %>
+      <%= f.text_area :body, class: "custom-text-area form-control" %>
+    </div>
+  </div>
+
+  <%= render partial: 'status', locals: { f: f } if current_user.type == 'AdminUser' %>
+
+
+    <%= f.submit 'Send', class: 'btn btn-dark' %>
+
+<% end %>

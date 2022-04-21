@@ -1,0 +1,22 @@
+<table class="table table-striped table-bordered table-sm ">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">Name</th>
+      <th scope="col">Date</th>
+      <th scope="col">Body</th>
+      <th scope="col">Action</th>
+      <th scope="col"></th>
+    </tr>
+  </thead>
+  <tbody>
+		<% pending_approvals.each do |pending_approval| %>
+			<tr>
+				<th><%= pending_approval.user.full_name %></th>
+				<td><%= pending_approval.date %></td>
+				<td><%= truncate pending_approval.body, length: 50 %></td>
+				<td><%= link_to 'Approve', approve_post_path(pending_approval), class: 'btn btn-success btn-block', id: "approve_#{pending_approval.id}" %></td>
+				<td><%= link_to 'Review', edit_post_path(pending_approval), class: 'btn btn-warning btn-block' %></td>
+			</tr>
+		<% end %>   
+  </tbody>
+</table>

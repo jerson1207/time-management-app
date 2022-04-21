@@ -1,0 +1,138 @@
+@import 'bootstrap/dist/css/bootstrap';
+// @import "simple_calendar";
+// @import "bourbon";
+// @import "home";
+// @import "users";
+
+.custom-nav {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.custom-text{
+	margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+textarea.form-control {
+  height: 200px;
+}
+
+.or {
+  width: 100%; 
+  text-align: center; 
+  border-bottom: 1px solid #000; 
+  line-height: 0.1em;
+  margin: 30px 0 20px;
+}
+
+.or span {
+  background:#fff; 
+  padding:0 10px;  
+}
+
+.calendar-heading{
+  color:#c00;
+  margin: 2.5em auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.login {
+  margin: 5rem auto;
+  padding: 1.5rem 2rem;
+  background-color: #f0f0f0;
+  box-shadow: 5px 10px #888888;
+}
+
+// admin
+.pending-homepage {
+	margin-top: 20px;
+	margin-bottom: 20px;
+	background-color: #E3E3E3;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	padding: 20px;
+}
+
+.homepage-block {
+	background-color: #1D3C91;
+	color: white;
+	margin:  12px 42px 12px 42px;
+	padding: 15px;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+} 
+
+.pending-details {
+	font-weight: 900;
+} 
+
+.homepage-block:hover {
+	background-color: #172b63;
+} 
+//////////////////
+
+
+body, p, ol, ul, td {
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 18px; }
+
+pre {
+  background-color: #eee;
+  padding: 10px;
+  font-size: 11px; }
+
+a {
+  color: #000; }
+
+a:visited {
+  color: #666; }
+
+a:hover {
+  color: #fff;
+  background-color: #000; }
+
+th {
+  padding-bottom: 5px; }
+
+td {
+  padding: 0 5px 7px; }
+
+div.field,
+div.actions {
+  margin-bottom: 10px; }
+
+#notice {
+  color: green; }
+
+.field_with_errors {
+  padding: 2px;
+  background-color: red;
+  display: table; }
+
+#error_explanation {
+  width: 450px;
+  border: 2px solid red;
+  padding: 7px 7px 0;
+  margin-bottom: 20px;
+  background-color: #f0f0f0; }
+
+#error_explanation h2 {
+  text-align: left;
+  font-weight: bold;
+  padding: 5px 5px 5px 15px;
+  font-size: 12px;
+  margin: -7px -7px 0;
+  background-color: #c00;
+  color: #fff; }
+
+#error_explanation ul li {
+  font-size: 12px;
+  list-style: square; }
+
+label {
+  display: block; }

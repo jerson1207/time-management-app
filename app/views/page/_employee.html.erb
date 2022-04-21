@@ -1,0 +1,11 @@
+<%= month_calendar events: @meetings, attribute: :start_time, end_attribute: :end_time do |date, meetings| %>
+  <p class="text-right"><%= date.day %></p>
+  <% meetings.each do |meeting| %>
+      <p class="text-left">
+        <%= meeting.name.upcase %>: 
+        <%= meeting.start_time.strftime("%I:%M %p") %> <span> - </span>
+        <%= meeting.end_time.strftime("%I:%M %p") %>
+      </p>
+  <% end %>
+<% end %>
+

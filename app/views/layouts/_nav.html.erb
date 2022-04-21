@@ -1,0 +1,50 @@
+<nav class="custom-nav navbar navbar-expand-lg navbar-light ">
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <div class="nine navbar-nav mr-auto">
+        <h1>Time Managent System</h1>
+      </div>
+
+    <ul class="dropdown my-2 my-lg-0">
+      <li class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Account
+      </li>
+      <div class="dropdown-menu dropdown-menu-right">
+        <%= current_user.full_name %>
+        <hr>
+        <% if current_user.try(:type) == 'AdminUser' %>
+          <%= link_to "Advance View", admin_root_path, class: "dropdown-item" %>
+        <hr>
+        <% end %>
+        <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
+      </div>    
+    </ul>
+
+    </div>
+  </nav>
+
+<% if current_user %>
+  <ul class="nav nav-tabs">
+    <li class="nav-item">
+      <%= link_to "Schedule", root_path, class: "nav-link #{active?(root_path)}" %>
+    </li>
+    
+    <%= render 'layouts/employee_nav_items' unless admin? %>
+    
+    <%= render 'layouts/audit_log_tab' if admin? %>
+  </ul>
+<% end %>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
